@@ -782,6 +782,87 @@ body {
     margin: 0;
 }
 
+/* 阶段核心信息总结表格样式 */
+.summary-table-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+}
+
+.table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    background: var(--bg-primary);
+}
+
+.summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.summary-table thead {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.summary-table th {
+    padding: 1rem 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.025em;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.summary-table td {
+    padding: 1rem 0.75rem;
+    border-bottom: 1px solid var(--border-light);
+    vertical-align: top;
+}
+
+.summary-table tbody tr:hover {
+    background: var(--bg-accent);
+    transition: background-color 0.2s ease;
+}
+
+.summary-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* 表格列宽度控制 */
+.summary-table th:nth-child(1),
+.summary-table td:nth-child(1) {
+    width: 20%;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.summary-table th:nth-child(2),
+.summary-table td:nth-child(2) {
+    width: 15%;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.summary-table th:nth-child(3),
+.summary-table td:nth-child(3) {
+    width: 40%;
+}
+
+.summary-table th:nth-child(4),
+.summary-table td:nth-child(4) {
+    width: 25%;
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .nav-buttons {
@@ -804,5 +885,25 @@ body {
     
     .verification-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .summary-table {
+        font-size: 0.8rem;
+    }
+    
+    .summary-table th,
+    .summary-table td {
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .summary-table th:nth-child(1),
+    .summary-table td:nth-child(1),
+    .summary-table th:nth-child(2),
+    .summary-table td:nth-child(2),
+    .summary-table th:nth-child(3),
+    .summary-table td:nth-child(3),
+    .summary-table th:nth-child(4),
+    .summary-table td:nth-child(4) {
+        width: auto;
     }
 }
